@@ -1,7 +1,7 @@
 import { render } from "./Render.js";
 
 import { Home } from "../pages/Home.js";
-import { SearchPage } from "../pages/Search.js";
+import { SearchPage } from "../pages/SearchBar.js";
 import { Favorites } from "../pages/Favorites.js";
 import { Profile } from "../pages/Profile.js";
 
