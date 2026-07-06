@@ -1,8 +1,8 @@
-export function Search(){
+export function SearchBar(){
 
     return `
 
-        <section class="search">
+        <section class="searchbar">
 
             <div class="container">
 
