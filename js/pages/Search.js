@@ -1,5 +1,5 @@
 import { Header } from "../components/Header.js";
-import { Search } from "../components/Search.js";
+import { SearchBar } from "../components/SearchBar.js";
 import { Navbar } from "../components/Navbar.js";
 
 export function SearchPage(){
@@ -8,7 +8,7 @@ export function SearchPage(){
 
         ${Header()}
 
-        ${Search()}
+        ${SearchBar()}
 
         <main class="container">
 
@@ -22,7 +22,7 @@ export function SearchPage(){
 
         </main>
 
-        ${Navbar("search")}
+        ${Navbar("searchbar")}
 
     `;
 
