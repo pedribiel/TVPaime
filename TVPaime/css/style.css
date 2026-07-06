@@ -1,0 +1,18 @@
+@import url("./core/reset.css");
+@import url("./core/variables.css");
+@import url("./core/typography.css");
+@import url("./core/layout.css");
+@import url("./core/animations.css");
+@import url("./core/responsive.css");
+
+@import url("./components/Header.css");
+@import url("./components/Hero.css");
+@import url("./components/SearchBar.css");
+@import url("./components/Card.css");
+@import url("./components/Carousel.css");
+@import url("./components/Navigation.css");
+
+@import url("./pages/Home.css");
+@import url("./pages/Search.css");
+@import url("./pages/Favorites.css");
+@import url("./pages/Profile.css");

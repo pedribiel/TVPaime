@@ -1,0 +1,35 @@
+body{
+
+    font-family:"Poppins",sans-serif;
+
+    color:var(--text);
+
+    background:var(--background);
+
+}
+
+h1{
+
+    font-size:34px;
+
+}
+
+h2{
+
+    font-size:28px;
+
+}
+
+h3{
+
+    font-size:20px;
+
+}
+
+p{
+
+    color:var(--text-secondary);
+
+    line-height:1.7;
+
+}

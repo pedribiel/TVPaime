@@ -1,0 +1,79 @@
+.header{
+
+    position:sticky;
+
+    top:0;
+
+    width:100%;
+
+    background:rgba(13,17,23,.95);
+
+    backdrop-filter:blur(15px);
+
+    border-bottom:1px solid var(--border);
+
+    z-index:999;
+
+}
+
+.header-content{
+
+    height:75px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+}
+
+.logo{
+
+    display:flex;
+
+    gap:12px;
+
+    align-items:center;
+
+    font-size:24px;
+
+    font-weight:600;
+
+}
+
+.logo i{
+
+    color:var(--primary);
+
+}
+
+.header-actions{
+
+    display:flex;
+
+    gap:12px;
+
+}
+
+.icon-button{
+
+    width:45px;
+
+    height:45px;
+
+    border-radius:50%;
+
+    background:var(--surface);
+
+    color:var(--text);
+
+    transition:.25s;
+
+}
+
+.icon-button:hover{
+
+    background:var(--surface-hover);
+
+}
