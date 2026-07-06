@@ -22,7 +22,7 @@ export function SearchPage(){
 
         </main>
 
-        ${Navbar("searchbar")}
+        ${Navbar("search")}
 
     `;
 
