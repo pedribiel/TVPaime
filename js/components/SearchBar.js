@@ -8,7 +8,7 @@ export function SearchBar(){
 
                 <input
 
-                    id="search"
+                    id="searchbar"
 
                     type="text"
 
