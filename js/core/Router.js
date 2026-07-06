@@ -11,7 +11,7 @@ export const Router = {
 
         home:Home,
 
-        searchbar:Search,
+        search:Search,
 
         favorites:Favorites,
 
