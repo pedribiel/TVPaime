@@ -1,0 +1,29 @@
+:root{
+
+    --background:#0D1117;
+
+    --surface:#161B22;
+
+    --surface-hover:#21262D;
+
+    --primary:#E50914;
+
+    --primary-hover:#ff303a;
+
+    --text:#F5F5F5;
+
+    --text-secondary:#8B949E;
+
+    --border:#30363D;
+
+    --success:#2ECC71;
+
+    --warning:#F39C12;
+
+    --danger:#E74C3C;
+
+    --radius:18px;
+
+    --shadow:0 10px 35px rgba(0,0,0,.35);
+
+}
