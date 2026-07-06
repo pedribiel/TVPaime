@@ -1,10 +1,10 @@
 import { Header } from "../components/Header.js";
-import { Search } from "../components/Search.js";
+import { SearchBar } from "../components/SearchBar.js";
 import { Hero } from "../components/Hero.js";
 import { Carousel } from "../components/Carousel.js";
 import { Navbar } from "../components/Navbar.js";
 
-import { movies } from "../data/movies.js";
+import { catalog } from "../data/catalog.js";
 
 export function Home(){
 
@@ -12,15 +12,15 @@ export function Home(){
 
         ${Header()}
 
-        ${Search()}
+        ${SearchBar()}
 
         ${Hero()}
 
-        ${Carousel("Continue Assistindo",movies)}
+        ${Carousel("Continue Assistindo",catalog)}
 
-        ${Carousel("Filmes Populares",movies)}
+        ${Carousel("Filmes Populares",catalog)}
 
-        ${Carousel("Séries Populares",movies)}
+        ${Carousel("Séries Populares",catalog)}
 
         ${Navbar("home")}
 
