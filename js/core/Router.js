@@ -1,7 +1,7 @@
 import { render } from "./Render.js";
 
 import { Home } from "../pages/Home.js";
-import { SearchBar } from "../pages/SearchBar.js";
+import { Search } from "../pages/Search.js";
 import { Favorites } from "../pages/Favorites.js";
 import { Profile } from "../pages/Profile.js";
 
@@ -11,7 +11,7 @@ export const Router = {
 
         home:Home,
 
-        searchbar:SearchBar,
+        searchbar:Search,
 
         favorites:Favorites,
 
