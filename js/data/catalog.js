@@ -1,1 +1,7 @@
-export const catalog = [];
+export let catalog = [];
+
+export function setCatalog(items){
+
+    catalog = items;
+
+}
