@@ -1,28 +1,16 @@
 import { Card } from "./Card.js";
 
-export function Carousel(title, items) {
+export function Carousel(title, items = []) {
 
     return `
 
-        <section class="carousel-section">
+        <section class="carousel">
 
-            <div class="container">
+            <h2>${title}</h2>
 
-                <div class="section-header">
+            <div class="carousel-track">
 
-                    <h2>${title}</h2>
-
-                    <button class="see-all">
-                        Ver tudo
-                    </button>
-
-                </div>
-
-                <div class="carousel">
-
-                    ${items.map(item => Card(item)).join("")}
-
-                </div>
+                ${items.map(Card).join("")}
 
             </div>
 
