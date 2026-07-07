@@ -1,28 +1,8 @@
-import { render } from "./Render.js";
+go(route){
 
-import { Home } from "../pages/Home.js";
-import { SearchPage } from "../pages/Search.js";
-import { Favorites } from "../pages/Favorites.js";
-import { Profile } from "../pages/Profile.js";
+    console.log("Rota:", route);
+    console.log(this.routes);
 
-export const Router = {
-
-    routes:{
-
-        home:Home,
-
-        search:SearchPage,
-
-        favorites:Favorites,
-
-        profile:Profile
-
-    },
-
-    go(route){
-
-        render(this.routes[route]);
-
-    }
+    render(this.routes[route]);
 
 }
