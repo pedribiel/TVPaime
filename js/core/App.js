@@ -1,11 +1,13 @@
-import { Router } from "./Router.js";
+import { TMDB } from "../services/tmdb.js";
 
 export const App = {
 
-    start(){
+    async start(){
 
-        Router.go("home");
+        const data = await TMDB.trending();
+
+        console.log(data);
 
     }
 
-};
+}
