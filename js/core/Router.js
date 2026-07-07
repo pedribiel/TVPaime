@@ -19,13 +19,10 @@ export const Router = {
 
     },
 
-go(route){
+    go(route){
 
-    console.log("Rota:", route);
-    console.log(this.routes);
+        render(this.routes[route]);
 
-    render(this.routes[route]);
-
-}
+    }
 
 }
