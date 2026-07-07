@@ -1,45 +1,23 @@
-.carousel-section{
-
-    margin:50px 0;
-
-}
-
-.section-header{
-
-    display:flex;
-
-    justify-content:space-between;
-
-    align-items:center;
-
-    margin-bottom:20px;
-
-}
-
 .carousel{
 
+    margin-bottom:32px;
+
+}
+
+.carousel h2{
+
+    margin-bottom:16px;
+
+}
+
+.carousel-track{
+
     display:flex;
 
-    gap:20px;
+    gap:16px;
 
     overflow-x:auto;
 
-    scroll-behavior:smooth;
-
-    padding-bottom:10px;
-
-}
-
-.carousel::-webkit-scrollbar{
-
-    height:8px;
-
-}
-
-.carousel::-webkit-scrollbar-thumb{
-
-    background:var(--surface-hover);
-
-    border-radius:20px;
+    padding-bottom:8px;
 
 }
