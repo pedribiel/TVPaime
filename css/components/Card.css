@@ -1,63 +1,41 @@
-.movie-card{
+.card{
 
     width:180px;
 
-    background:var(--surface);
-
-    border-radius:18px;
-
-    overflow:hidden;
-
-    transition:.3s;
-
-    cursor:pointer;
+    flex-shrink:0;
 
 }
 
-.movie-card:hover{
-
-    transform:translateY(-6px);
-
-    background:var(--surface-hover);
-
-}
-
-.movie-card img{
+.card img{
 
     width:100%;
 
-    aspect-ratio:2/3;
+    border-radius:12px;
 
-    object-fit:cover;
-
-}
-
-.movie-info{
-
-    padding:15px;
+    display:block;
 
 }
 
-.movie-info h3{
+.card-info{
 
-    font-size:16px;
-
-    margin-bottom:8px;
+    margin-top:8px;
 
 }
 
-.movie-info p{
+.card-info h3{
 
-    font-size:14px;
+    font-size:15px;
 
-    margin-bottom:8px;
+    margin-bottom:4px;
 
 }
 
-.movie-info span{
+.card-info span{
 
-    color:gold;
+    display:block;
 
-    font-weight:600;
+    font-size:13px;
+
+    color:#AAA;
 
 }
