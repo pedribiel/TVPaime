@@ -1,58 +1,25 @@
-import { getHomeCatalog } from "../services/catalog.js";
-import Card from "../components/Card.js";
+import { Header } from "../components/Header.js";
+import { Hero } from "../components/Hero.js";
+import { Carousel } from "../components/Carousel.js";
+import { Navbar } from "../components/Navbar.js";
 
+import { catalog } from "../data/catalog.js";
 
-export async function Home(){
-
-
-    const catalog = await getHomeCatalog();
-
-
+export function Home(){
 
     return `
 
-    <section class="home">
+        ${Header()}
 
+        ${Hero()}
 
-        <h2>
-            Séries populares
-        </h2>
+        <main class="container">
 
+            ${Carousel("Em alta", catalog)}
 
-        <div class="grid">
+        </main>
 
-            ${
-                catalog.series
-                .map(
-                    serie => Card(serie)
-                )
-                .join("")
-            }
-
-        </div>
-
-
-
-        <h2>
-            Filmes populares
-        </h2>
-
-
-        <div class="grid">
-
-            ${
-                catalog.movies
-                .map(
-                    movie => Card(movie)
-                )
-                .join("")
-            }
-
-        </div>
-
-
-    </section>
-
+        ${Navbar("home")}
 
     `;
 
