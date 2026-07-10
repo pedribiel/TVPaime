@@ -15,7 +15,7 @@ export function Home(){
 
         <main class="container">
 
-            ${Carousel("Em alta", catalog)}
+            ${Carousel("Em alta", catalog.trending)}
 
         </main>
 
