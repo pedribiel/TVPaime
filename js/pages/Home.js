@@ -9,17 +9,21 @@ export function Home(){
 
     return `
 
-        ${Header()}
+       Header()
 
-        ${Hero()}
+       SearchBar()
 
-        <main class="container">
+       Hero()
 
-            ${Carousel("Em alta", catalog)}
+       Carousel("▶ Continue Assistindo", watching)
 
-        </main>
+       Carousel("📌 Minha Lista", watchlist)
 
-        ${Navbar("home")}
+       Carousel("✅ Completos", completed)
+
+       Carousel("🔥 Em Alta", catalog.trending)
+
+       Navbar()
 
     `;
 
