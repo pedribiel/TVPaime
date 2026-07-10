@@ -1,5 +1,6 @@
 import { Router } from "./Router.js";
 import { TMDB } from "../services/tmdb.js";
+import { catalog } from "../data/catalog.js";
 
 export const App = {
 
