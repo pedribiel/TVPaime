@@ -1,7 +1,7 @@
-export let catalog = [];
+export const catalog = {
 
-export function setCatalog(items){
+    trending: [],
+    movies: [],
+    series: []
 
-    catalog = items;
-
-}
+};
