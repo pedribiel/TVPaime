@@ -21,5 +21,13 @@ export function render(page){
             };
 
         });
+    
+    import { UI } from "./UI.js";
+
+    export function render(page){
+
+    document.getElementById("app").innerHTML = page();
+
+    UI.init();
 
 }
