@@ -30,4 +30,4 @@ export function render(page){
 
     UI.init();
 
-}
+}}
