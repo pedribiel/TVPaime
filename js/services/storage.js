@@ -2,7 +2,7 @@ const PREFIX = "TCPaime";
 
 export const Storage = {
 
-    get(key){
+    get(key) {
 
         const data = localStorage.getItem(`${PREFIX}_${key}`);
 
@@ -10,15 +10,18 @@ export const Storage = {
 
     },
 
-    set(key,value){
+    set(key, value) {
 
         localStorage.setItem(
-
             `${PREFIX}_${key}`,
-
             JSON.stringify(value)
-
         );
+
+    },
+
+    remove(key) {
+
+        localStorage.removeItem(`${PREFIX}_${key}`);
 
     }
 
