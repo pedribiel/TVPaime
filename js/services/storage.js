@@ -1,21 +1,24 @@
+const PREFIX = "TCPaime";
+
 export const Storage = {
 
-    save(key, value) {
+    get(key){
 
-        localStorage.setItem(
-            key,
-            JSON.stringify(value)
-        );
+        const data = localStorage.getItem(`${PREFIX}_${key}`);
+
+        return data ? JSON.parse(data) : [];
 
     },
 
-    load(key) {
+    set(key,value){
 
-        const data = localStorage.getItem(key);
+        localStorage.setItem(
 
-        return data
-            ? JSON.parse(data)
-            : null;
+            `${PREFIX}_${key}`,
+
+            JSON.stringify(value)
+
+        );
 
     }
 
