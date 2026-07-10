@@ -1,6 +1,5 @@
 import { Router } from "./Router.js";
 import { TMDB } from "../services/tmdb.js";
-import { setCatalog } from "../data/catalog.js";
 
 export const App = {
 
@@ -10,7 +9,7 @@ export const App = {
 
             const response = await TMDB.trending();
 
-            setCatalog(response.results);
+            catalog.trending = response.results;
 
             console.log("Catálogo carregado!");
 
