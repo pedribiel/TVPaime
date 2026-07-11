@@ -33,12 +33,36 @@ export function Card(item) {
 
                 <span>${ano}</span>
 
-                <button
-                    class="status-btn"
-                    data-id="${item.id}"
-                >
-                    ➕ Adicionar à Lista
+                <div class="status-menu">
+
+            <button
+                class="status-btn"
+                data-id="${item.id}"
+            >
+                📌 Status
+            </button>
+
+            <div class="status-options">
+
+                <button data-status="watchlist">
+                    📌 Quero assistir
                 </button>
+
+                <button data-status="watching">
+                    ▶ Assistindo
+                </button>
+
+                <button data-status="completed">
+                    ✅ Completo
+                </button>
+
+                <button data-status="remove">
+                    ❌ Remover
+                </button>
+
+            </div>
+
+        </div>
 
             </div>
 
