@@ -7,6 +7,7 @@ export const UI = {
 
         this.bindNavbar();
         this.bindStatusButtons();
+        this.bindStatusOptions();
 
     }, //init
 
