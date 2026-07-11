@@ -33,6 +33,13 @@ export function Card(item) {
 
                 <span>${ano}</span>
 
+                <button
+                    class="status-btn"
+                    data-id="${item.id}"
+                >
+                    ➕ Adicionar à Lista
+                </button>
+
             </div>
 
         </article>
