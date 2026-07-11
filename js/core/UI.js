@@ -42,8 +42,7 @@ export const UI = {
 
                     ...catalog.trending,
                     ...catalog.movies,
-                    ...catalog.series,
-                    ...catalog.upcoming
+                    ...catalog.series
 
                 ].find(item=>item.id===id);
 
