@@ -1,5 +1,6 @@
-const IMAGE_BASE = "https://image.tmdb.org/t/p/w342";
 import { getStatus } from "../data/library.js";
+
+const IMAGE_BASE = "https://image.tmdb.org/t/p/w342";
 
 export function Card(item) {
 
@@ -18,24 +19,24 @@ export function Card(item) {
 
     const status = getStatus(item.id);
 
-        let statusText = "➕ Adicionar";
+    let statusText = "➕ Adicionar";
 
-            switch (status) {
+    switch (status) {
 
-                case "watchlist":
-                    statusText = "📌 Quero assistir";
-                break;
+        case "watchlist":
+            statusText = "📌 Quero assistir";
+            break;
 
-                case "watching":
-                    statusText = "▶ Assistindo";
-                break;
+        case "watching":
+            statusText = "▶ Assistindo";
+            break;
 
-                case "completed":
-                    statusText = "✅ Completo";
-                break;
+        case "completed":
+            statusText = "✅ Completo";
+            break;
 
-            } //switch
-    
+    }
+
     return `
 
         <article class="card">
@@ -56,16 +57,34 @@ export function Card(item) {
 
                 <div class="status-menu">
 
-                <button
-                    class="status-btn"
-                    data-id="${item.id}"
-                >
-                    ${statusText}
-                </button>
+                    <button
+                        class="status-btn"
+                        data-id="${item.id}"
+                    >
+                        ${statusText}
+                    </button>
 
-            </div>
+                    <div class="status-options">
 
-        </div>
+                        <button data-status="watchlist">
+                            📌 Quero assistir
+                        </button>
+
+                        <button data-status="watching">
+                            ▶ Assistindo
+                        </button>
+
+                        <button data-status="completed">
+                            ✅ Completo
+                        </button>
+
+                        <button data-status="remove">
+                            ❌ Remover
+                        </button>
+
+                    </div>
+
+                </div>
 
             </div>
 
