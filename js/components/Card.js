@@ -39,7 +39,7 @@ export function Card(item) {
                 class="status-btn"
                 data-id="${item.id}"
             >
-                📌 Status
+                ➕ Status
             </button>
 
             <div class="status-options">
