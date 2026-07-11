@@ -1,4 +1,5 @@
 const IMAGE_BASE = "https://image.tmdb.org/t/p/w342";
+import { getStatus } from "../data/library.js";
 
 export function Card(item) {
 
@@ -15,6 +16,26 @@ export function Card(item) {
     const ano = (item.release_date || item.first_air_date || "")
         .slice(0, 4);
 
+    const status = getStatus(item.id);
+
+        let statusText = "➕ Adicionar";
+
+            switch (status) {
+
+                case "watchlist":
+                    statusText = "📌 Quero assistir";
+                break;
+
+                case "watching":
+                    statusText = "▶ Assistindo";
+                break;
+
+                case "completed":
+                    statusText = "✅ Completo";
+                break;
+
+            } //switch
+    
     return `
 
         <article class="card">
@@ -35,29 +56,11 @@ export function Card(item) {
 
                 <div class="status-menu">
 
-            <button
-                class="status-btn"
-                data-id="${item.id}"
-            >
-                ➕ Status
-            </button>
-
-            <div class="status-options">
-
-                <button data-status="watchlist">
-                    📌 Quero assistir
-                </button>
-
-                <button data-status="watching">
-                    ▶ Assistindo
-                </button>
-
-                <button data-status="completed">
-                    ✅ Completo
-                </button>
-
-                <button data-status="remove">
-                    ❌ Remover
+                <button
+                    class="status-btn"
+                    data-id="${item.id}"
+                >
+                    ${statusText}
                 </button>
 
             </div>
