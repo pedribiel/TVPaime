@@ -35,29 +35,15 @@ export const UI = {
 
         document.querySelectorAll(".status-btn").forEach(button=>{
 
-            button.addEventListener("click",()=>{
+            button.addEventListener("click",(event)=>{
 
-                const id = Number(button.dataset.id);
+                event.stopPropagation();
 
-                const item = [
+                button.parentElement.classList.toggle("open");
 
-                    ...catalog.trending,
-                    ...catalog.movies,
-                    ...catalog.series
+            }); // button
 
-                ].find(item=>item.id===id);
-
-                if(!item) return;
-
-                button.addEventListener("click", () => {
-
-                    button.parentElement.classList.toggle("open");
-
-                }); //button
-
-            }); //button
-
-        }); //documents
+        }); // document
 
     }, //bindStatusButtons
 
@@ -67,11 +53,55 @@ export const UI = {
 
             button.addEventListener("click",()=>{
 
-                console.log(button.dataset.status);
+                const status = button.dataset.status;
+
+                const menu = button.closest(".status-menu");
+
+                const statusButton = menu.querySelector(".status-btn");
+
+                const id = Number(statusButton.dataset.id);
+
+                const item = [
+
+                    ...catalog.trending,
+                    ...catalog.movies,
+                    ...catalog.series
+
+                ].find(item => item.id === id);
+
+                if(!item) return;
+
+                if(status !== "remove"){
+
+                    setStatus(item, status);
+
+                } //if
+
+                switch(status){
+
+                    case "watchlist":
+                        statusButton.textContent = "📌 Quero assistir";
+                        break;
+    
+                    case "watching":
+                        statusButton.textContent = "▶ Assistindo";
+                        break;
+
+                    case "completed":
+                        statusButton.textContent = "✅ Completo";
+                        break;
+
+                    case "remove":
+                        statusButton.textContent = "➕ Adicionar";
+                        break;
+
+                } //switch
+
+                menu.classList.remove("open");
 
             }); //button
 
-        }); //document
+        }); // document
 
     } //bindStatusOptions
 
