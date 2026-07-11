@@ -48,14 +48,30 @@ export const UI = {
 
                 if(!item) return;
 
-                setStatus(item,"watchlist");
+                button.addEventListener("click", () => {
 
-                button.textContent = "📌 Na Lista";
+                    button.parentElement.classList.toggle("open");
+
+                }); //button
 
             }); //button
 
         }); //documents
 
-    } //bindStatusButtons
+    }, //bindStatusButtons
+
+    bindStatusOptions(){
+
+        document.querySelectorAll(".status-options button").forEach(button=>{
+
+            button.addEventListener("click",()=>{
+
+                console.log(button.dataset.status);
+
+            }); //button
+
+        }); //document
+
+    } //bindStatusOptions
 
 }; //export
