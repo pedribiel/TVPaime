@@ -28,7 +28,7 @@ export const UI = {
 
         }); //document
 
-    } //bindNavbar
+    }, //bindNavbar
 
     bindStatusButtons(){
 
