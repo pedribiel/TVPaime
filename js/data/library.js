@@ -4,11 +4,11 @@ export let library = Storage.get("library");
 
 export function saveLibrary() {
     Storage.set("library", library);
-}
+} //export
 
 export function getItem(id) {
     return library.find(item => item.id === id);
-}
+} //export
 
 export function setStatus(item, status) {
 
@@ -26,10 +26,16 @@ export function setStatus(item, status) {
             poster_path: item.poster_path,
             media_type: item.media_type || "movie",
             status
-        });
+        }); //library
 
-    }
+    }//else
 
     saveLibrary();
 
-}
+}// export
+
+export function getStatus(id) {
+
+    return library.find(item => item.id === id)?.status ?? null;
+
+} // export
